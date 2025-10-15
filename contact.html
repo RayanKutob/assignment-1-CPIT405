@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rayan Kutob - Contact</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Header with sticky navigation -->
+    <header>
+        <div class="left-side-header">
+            <h1>
+                Rayan Kutob
+                <span id="sub_title">Information Technology Student</span>
+            </h1>
+        </div>
+        <div class="right-side-header">
+            <nav>
+                <ul>
+                    <li><a href="index.html">CV</a></li>
+                    <li><a href="schedule.html">Class Schedule</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Main content with grid layout -->
+    <main class="grid-container">
+        <!-- Sidebar with profile -->
+        <aside class="profile">
+            <img src="images/profile.png" alt="Your Profile Picture" class="profile-pic">
+            
+            <h2 class="title">Contact</h2>
+            <p>Email: <a href="mailto:rfuad0001@stu.kau.edu.sa">rfuad0001@stu.kau.edu.sa</a></p>
+            <p>Phone: <a href="tel:+966563914102">+966563914102</a></p>
+            
+            <div>
+                </a>
+                <a target="_blank" href="https://www.linkedin.com/in/rayankutob">
+                    <img class="social-media-icon" src="images/linkedin.png" alt="LinkedIn">
+                </a>
+            </div>
+        </aside>
+
+        <!-- Contact form section -->
+        <section class="content">
+            <h2 class="title">Contact Me</h2>
+            
+            <!-- Contact form - sends to webhook.site -->
+            <!-- Important: Go to https://webhook.site/ and create your unique link, then place it in the action attribute -->
+            <form action="https://webhook.site/YOUR-UNIQUE-ID" method="post">
+                
+                <!-- Name field - Required -->
+                <div class="form-div">
+                    <label for="name">Name:</label>
+                    <input class="form-control" type="text" id="name" name="name" required>
+                </div>
+                
+                <!-- Email field - Optional -->
+                <div class="form-div">
+                    <label for="email">Email:</label>
+                    <input class="form-control" type="email" id="email" name="email">
+                </div>
+                
+                <!-- Message textarea - Required, 10 rows -->
+                <div class="form-div">
+                    <label for="message">Message:</label>
+                    <textarea rows="10" class="form-control" id="message" name="message" required></textarea>
+                </div>
+                
+                <!-- Radio buttons for message type -->
+                <div class="form-div">
+                    <label>Message Type:</label><br>
+                    <input type="radio" name="message_type" id="complaint" value="complaint" required>
+                    <label for="complaint">Complaint</label>
+                    
+                    <input type="radio" name="message_type" id="inquiry" value="inquiry" checked>
+                    <label for="inquiry">Inquiry</label>
+                </div>
+                
+                <!-- Submit button -->
+                <div class="form-div">
+                    <input class="form-submit" type="submit" value="Send">
+                </div>
+            </form>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2025 Rayan Kutob</p>
+    </footer>
+</body>
+</html>

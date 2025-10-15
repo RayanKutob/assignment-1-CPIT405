@@ -1,0 +1,337 @@
+/* General Grid Layout */
+html,
+body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+    grid-template-columns: 1fr;
+    grid-template-areas:
+        "header"
+        "main"
+        "footer";
+    font-family: "Courier New", serif;
+    background-image: url("images/background.png");
+}
+
+/* Header, Navigation, Footer */
+header {
+    position: sticky;
+    top: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    grid-area: header;
+    text-align: center;
+    padding: 10px;
+    padding-left: 10%;
+    padding-right: 10%;
+    background: #00722e;
+    color: white;
+    z-index: 1000;
+}
+
+main {
+    grid-area: main;
+    width: 90%;
+    margin: 0 auto;
+}
+
+nav {
+    grid-area: nav;
+    text-align: center;
+    padding: 5px;
+    background: #005a22;
+}
+
+footer {
+    grid-area: footer;
+    text-align: center;
+    padding: 10px;
+    background: #00722e;
+    color: white;
+}
+
+/* Navigation Styling */
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: yellow;
+    font-weight: bolder;
+    background-color: transparent;
+}
+
+/* Profile Section (Grid Layout) */
+.grid-container {
+    display: grid;
+    grid-template-columns: 300px 1fr;
+    gap: 40px;
+    margin-top: 10px;
+}
+
+.profile {
+    text-align: center;
+}
+
+.profile-pic {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    margin-top: 20px;
+    border: 2px solid transparent;
+    animation: borderColorAnimation 3s infinite;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+/* Keyframes for border color animation */
+@keyframes borderColorAnimation {
+    0% {
+        border-color: red;
+    }
+
+    25% {
+        border-color: orange;
+    }
+
+    50% {
+        border-color: yellow;
+    }
+
+    75% {
+        border-color: green;
+    }
+
+    100% {
+        border-color: red;
+    }
+}
+
+/* Table Styling */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+}
+
+th,
+td {
+    border: 1px solid #ddd;
+    padding: 10px;
+    text-align: center;
+}
+
+th {
+    background: #00722e;
+    color: white;
+}
+
+tr {
+    background: #f2f2f2;
+}
+
+/* Courses table specific styling */
+table.courses tr:nth-child(odd) {
+    background: #e4e0e0;
+}
+
+table.courses tr:nth-child(even) {
+    background: #c8c6c6;
+}
+
+table.courses tr:nth-child(odd):hover {
+    background: #d0d0d0;
+}
+
+table.courses tr:nth-child(even):hover {
+    background: #a8afa8;
+}
+
+/* Form Focus & Required */
+input[type='text']:focus,
+input[type='email']:focus,
+textarea:focus {
+    background: #eef;
+    outline: 2px solid darkslateblue;
+}
+
+input:required,
+textarea:required {
+    border: 2px solid darkslateblue;
+}
+
+/* Pseudo-element Styling */
+.about p:first-of-type::first-letter {
+    font-size: 2em;
+    color: darkgreen;
+    font-weight: bold;
+}
+
+/* Title styling */
+#sub_title {
+    font-size: small;
+    display: block;
+    margin-top: 5px;
+}
+
+.left-side-header {
+    float: left;
+}
+
+.right-side-header {
+    float: right;
+}
+
+.title {
+    border-bottom-color: lightgray;
+    border-bottom-style: dashed;
+    border-bottom-width: 3px;
+    padding: 10px;
+}
+
+/* Link styling - remove underline */
+a {
+    text-decoration: none;
+}
+
+/* Left side menu */
+.left-side-menu {
+    font-size: larger;
+    list-style: none;
+    padding: 0;
+    border-radius: 5px;
+}
+
+.left-side-menu li {
+    padding-top: 5px;
+    padding-bottom: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.left-side-menu li:hover {
+    background-color: #a9dfa9;
+    cursor: pointer;
+}
+
+.left-side-menu a {
+    margin: 10px;
+    color: darkgreen;
+    background-color: transparent;
+    padding: 5px 10px;
+    display: block;
+}
+
+/* Fragment link different styling */
+.left-side-menu a {
+    color: darkblue;
+    font-weight: bold;
+}
+
+/* General link hover effect */
+a:hover {
+    color: darkgreen;
+    background-color: lightyellow;
+    transition: all 0.3s ease;
+}
+
+/* Social media icons */
+.social-media-icon {
+    width: 30px;
+    height: 30px;
+    margin: 5px;
+    transition: all 0.3s ease;
+}
+
+.social-media-icon:hover {
+    width: 35px;
+    height: 35px;
+    transform: rotate(5deg);
+}
+
+/* Form styling */
+.form-div {
+    display: block;
+    margin: 10px;
+}
+
+.form-control {
+    width: 100%;
+    padding: 10px;
+    margin: 5px 0;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+}
+
+.form-submit {
+    width: 20%;
+    padding: 10px;
+    margin: 5px 0;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    background-color: #00722e;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out;
+}
+
+.form-submit:hover {
+    background-color: #555;
+}
+
+.form-submit:active {
+    background-color: #666;
+}
+
+/* Content section */
+.content {
+    background-color: rgba(178, 255, 185, 0.9);
+    padding: 20px;
+    border-radius: 10px;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    .grid-container {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .profile {
+        margin-left: 0;
+    }
+
+    header {
+        flex-direction: column;
+        padding-left: 5%;
+        padding-right: 5%;
+    }
+
+    .left-side-header,
+    .right-side-header {
+        float: none;
+        width: 100%;
+    }
+
+    .form-submit {
+        width: 100%;
+    }
+}
